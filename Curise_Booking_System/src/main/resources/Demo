@@ -1,0 +1,43 @@
+try {
+String path = ("src/main/resources/"+day+month+year+".csv");
+		File file = new File(path);
+		file.createNewFile();
+		String date2 = (day+"/"+month+"/"+year);
+		FileWriter writer = new FileWriter(path);
+		writer.append("Cust_ID ,Cust_Name,Booking Data,\n");
+		for (Data u : al) {
+			if(u.getDate().equals(date2)) {
+			writer.append(u.getId());
+			writer.append(",");
+			writer.append(u.getName());
+			writer.append(",");
+			writer.append(u.getDate() + "\n");
+			}
+		}
+		writer.close();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+		
+		//		try {
+//			String path = ("src/main/resources/"+day+month+year+".csv");
+//			File file = new File(path);
+//			file.createNewFile();
+//			FileWriter writer = new FileWriter(file);
+//			writer.append("Cust_ID ,Cust_Name,Booking Data,\n");
+//			for (Data u : al3) {
+////				writer.append(u.getId());
+////				writer.append(",");
+////				writer.append(u.getName());
+////				writer.append(",");
+////				writer.append(u.getDate() + "\n");
+//				System.out.println(u.getId()+" "+u.getName());
+//				}
+//			writer.close();
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//		
